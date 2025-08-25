@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Магазин приколів</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Магазин приколів</h1>
+    <div class="products">
+        <div class="product">
+            <h2>Кефір</h2>
+            <p class="price">49 грн (знижка)</p>
+            <button onclick="openForm('Кефір', 49)">Замовити</button>
+        </div>
+        <div class="product">
+            <h2>Лабубу</h2>
+            <p class="price">799 грн</p>
+            <button onclick="openForm('Лабубу', 799)">Замовити</button>
+        </div>
+        <div class="product">
+            <h2>Палка з какашкою</h2>
+            <p class="price">3.14 грн</p>
+            <button onclick="openForm('Палка з какашкою', 3.14)">Замовити</button>
+        </div>
+        <div class="product">
+            <h2>Зволожувач повітря</h2>
+            <p class="price soldout">1699 грн (розпродано)</p>
+            <button disabled>Недоступно</button>
+        </div>
+    </div>
+
+    <div id="orderForm" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeForm()">&times;</span>
+            <h2 id="productTitle"></h2>
+            <form onsubmit="sendOrder(event)">
+                <input type="text" id="fullname" placeholder="Прізвище, ім'я, по батькові" required>
+                <input type="tel" id="phone" placeholder="Номер телефону" required>
+                <input type="text" id="novaPoshta" placeholder="Адреса Нової Пошти" required>
+                <input type="hidden" id="product">
+                <input type="hidden" id="price">
+                <button type="submit">Відправити замовлення</button>
+            </form>
+            <p id="status"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
