@@ -1,5 +1,5 @@
 const BOT_TOKEN = "7158887428:AAH7j-uUFJKV2xqGci6hUaMm3ycznVQ6Q1I";
-const CHAT_ID = "";
+const CHAT_ID = "https://modern-site-ashen.vercel.app/";
 
 function openForm(name, price) {
     document.getElementById('productTitle').innerText = `Замовлення: ${name}`;
